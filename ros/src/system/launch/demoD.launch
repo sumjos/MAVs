@@ -25,15 +25,13 @@
 
 
 
-  <include file="$(find vehicle_description)/launch/main.launch">
-    <arg name="system_params_path" value="$(arg system_params_path)"/>
+  <include file="$(find chrono_gazebo_integ)/launch/main.launch">
     <arg name="vehicle_params_path" value="$(arg vehicle_params_path)"/>
     <arg name="case_params_path" value="$(arg case_params_path)"/>
-    <arg name="obstacle_num" value="$(arg obstacle_num)"/>
     <arg name="gui" value="$(arg gui)"/>
   </include>
 
-  <include file="$(find ros_base_planner)/launch/main.launch">
+  <!--include file="$(find ros_base_planner)/launch/main.launch">
     <arg name="case_params_file" value="$(arg system_params_path)"/>
     <arg name="global_params_file" value="$(arg vehicle_params_path)"/>
     <arg name="laser_scan_topic" value="$(arg laser_scan_topic)"/>
@@ -46,6 +44,6 @@
     <arg name="case_params_path" value="$(arg case_params_path)"/>
     <arg name="chrono_params_path" value="$(arg chrono_params_path)"/>
 
-  </include>
+  </include-->
 
 </launch>
